@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="JEE NEXUS AI — your personal JEE preparation command center.">
+  <title>JEE NEXUS AI — Your JEE Command Center</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="JEE NEXUS AI home"><span class="brand-mark">N</span><span>JEE <b>NEXUS</b><small>AI LEARNING SYSTEM</small></span></a>
+    <div class="top-actions"><span class="status-dot"></span><span class="status-text">YOUR PREP, UPGRADED</span><button id="resetBtn" class="icon-btn" title="Reset local progress" aria-label="Reset local progress">↻</button></div>
+  </header>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <p class="eyebrow">WORKSPACE</p>
+      <button class="nav-item active" data-page="overview"><span>◫</span> Overview</button>
+      <button class="nav-item" data-page="tutor"><span>✳</span> AI Tutor <i class="nav-pill">AI</i></button>
+      <button class="nav-item" data-page="practice"><span>⌁</span> Practice Arena</button>
+      <button class="nav-item" data-page="planner"><span>◷</span> Mission Planner</button>
+      <button class="nav-item" data-page="mistakes"><span>⌁</span> Mistake Intelligence</button>
+      <button class="nav-item" data-page="syllabus"><span>▦</span> Syllabus Map</button>
+      <div class="sidebar-bottom"><div class="mini-orb">✦</div><b>Small steps. Big ranks.</b><p>Consistency beats intensity. Show up today.</p><div class="side-progress"><span id="sideProgress"></span></div><small id="sideProgressLabel">0% weekly missions complete</small></div>
+    </aside>
+    <main class="main-content">
+      <section class="page active" id="page-overview">
+        <div class="hero">
+          <div><div class="kicker"><span class="spark">✦</span> YOUR PERSONAL JEE COMMAND CENTER</div><h1>Think deeper.<br><span>Rank higher.</span></h1><p class="hero-copy">One focused session at a time. Your AI-powered workspace for mastering JEE Main and Advanced.</p><div class="hero-actions"><button class="btn btn-primary" data-go="tutor">Ask your AI tutor <span>↗</span></button><button class="btn btn-ghost" data-go="practice">Start a practice set</button></div></div>
+          <div class="hero-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core"><div class="core-inner">N<span>✦</span></div></div><div class="float-chip chip-top"><span class="chip-dot"></span> FOCUS MODE <b>ON</b></div><div class="float-chip chip-bottom"><span>⚡</span><div><b>Momentum</b><small>Build it daily</small></div></div><div class="tiny-star star-one">✦</div><div class="tiny-star star-two">✧</div></div>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">YOUR SIGNALS</p><h2>Progress snapshot</h2></div><span class="date-chip" id="todayLabel">TODAY</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Study streak</span><span class="stat-icon purple">✦</span></div><strong id="streakStat">0 <small>days</small></strong><p>Keep your momentum alive</p></article>
+          <article class="stat-card"><div class="stat-top"><span>Questions attempted</span><span class="stat-icon blue">⌁</span></div><strong id="attemptStat">0</strong><p>Every attempt teaches you</p></article>
+          <article class="stat-card"><div class="stat-top"><span>Accuracy</span><span class="stat-icon green">◎</span></div><strong id="accuracyStat">—<small>%</small></strong><p>Based on practice attempts</p></article>
+          <article class="stat-card"><div class="stat-top"><span>Missions completed</span><span class="stat-icon orange">✓</span></div><strong id="missionStat">0 <small>/ 3</small></strong><p>Today's plan, your pace</p></article>
+        </div>
+        <div class="two-col">
+          <article class="panel">
+            <div class="panel-heading"><div><p class="eyebrow">TODAY'S FOCUS</p><h3>Mission control</h3></div><button class="text-btn" data-go="planner">View plan ↗</button></div>
+            <div id="missionPreview" class="mission-list"></div>
+          </article>
+          <article class="panel ai-panel">
+            <div class="ai-panel-icon">✳</div><p class="eyebrow">NEXUS AI</p><h3>Stuck on a concept?</h3><p class="muted">Turn a confusing topic into a clear, step-by-step explanation.</p><button class="btn btn-primary btn-full" data-go="tutor">Open AI Tutor <span>↗</span></button><div class="panel-foot"><span class="live-dot"></span> Connect your API to enable live AI responses</div>
+          </article>
+        </div>
+        <div class="section-heading lower-heading"><div><p class="eyebrow">QUICK ACCESS</p><h2>Pick your next move</h2></div></div>
+        <div class="quick-grid"><button class="quick-card" data-go="practice"><span class="quick-icon blue">⌁</span><b>Practice questions</b><small>Train your problem-solving</small><span class="quick-arrow">↗</span></button><button class="quick-card" data-go="mistakes"><span class="quick-icon orange">⌁</span><b>Review mistakes</b><small>Learn from every error</small><span class="quick-arrow">↗</span></button><button class="quick-card" data-go="syllabus"><span class="quick-icon green">▦</span><b>Explore syllabus</b><small>Map your full journey</small><span class="quick-arrow">↗</span></button></div>
+        <footer>JEE NEXUS AI <span>·</span> Built for the long game. Study smart, stay curious.</footer>
+      </section>
+
+      <section class="page" id="page-tutor">
+        <div class="page-title"><p class="eyebrow">YOUR ON-DEMAND STUDY PARTNER</p><h1>AI <span>Tutor</span></h1><p>Ask a doubt, request a hint, or explore a concept from first principles.</p></div>
+        <div class="tutor-layout"><div class="panel chat-panel"><div class="chat-head"><div class="ai-avatar">✳</div><div><b>Nexus Tutor</b><small><span class="live-dot"></span> Ready to help you learn</small></div><span class="model-chip">JEE MODE</span></div><div id="chatMessages" class="chat-messages"><div class="message assistant"><div class="message-avatar">✳</div><div class="bubble"><b>Hey, future engineer.</b><p>I'm your study companion. Share a JEE doubt or pick a prompt below. I'll aim to explain the reasoning, not just the final answer.</p><small>Tip: Include the chapter and what you've tried.</small></div></div></div><div class="prompt-row"><button class="prompt-chip" data-prompt="Explain Newton's laws with JEE-level examples.">Explain a concept</button><button class="prompt-chip" data-prompt="Give me a hint-first approach to solving a JEE question on chemical equilibrium. Do not reveal the final answer immediately.">Give me a hint</button><button class="prompt-chip" data-prompt="Create a 5-question mini quiz on functions for JEE Main, with answers and explanations after I respond.">Make a mini quiz</button></div><form id="chatForm" class="chat-form"><textarea id="chatInput" rows="2" placeholder="Ask your doubt… (Shift + Enter for a new line)" required></textarea><button class="send-btn" type="submit" aria-label="Send message">↑</button></form><div class="chat-disclaimer">AI can make mistakes. Verify important answers with trusted study material.</div></div><aside class="panel tutor-side"><p class="eyebrow">STUDY SETTINGS</p><label class="field-label" for="subjectSelect">Subject</label><select id="subjectSelect"><option>Physics</option><option>Chemistry</option><option>Mathematics</option><option>General JEE</option></select><label class="field-label" for="levelSelect">Target level</label><select id="levelSelect"><option>JEE Main</option><option>JEE Advanced</option><option>Build fundamentals</option></select><div class="tip-box"><span>✦</span><div><b>Learn actively</b><p>Ask for a hint first, explain your reasoning, then ask the tutor to check it.</p></div></div><div class="api-state" id="apiState"><span class="state-indicator"></span><div><b>AI connection</b><small>Checking configuration…</small></div></div></aside></div>
+      </section>
+
+      <section class="page" id="page-practice">
+        <div class="page-title"><p class="eyebrow">TRAIN WITH INTENTION</p><h1>Practice <span>Arena</span></h1><p>Warm up with a starter set. Your results are saved on this device.</p></div>
+        <div class="practice-toolbar panel"><div><label class="field-label" for="practiceSubject">Subject</label><select id="practiceSubject"><option value="all">All subjects</option><option>Physics</option><option>Chemistry</option><option>Mathematics</option></select></div><div><label class="field-label" for="practiceLevel">Difficulty</label><select id="practiceLevel"><option value="all">All levels</option><option>Foundation</option><option>JEE Main</option></select></div><button id="newSetBtn" class="btn btn-primary">New practice set ↗</button></div>
+        <div id="quizArea" class="quiz-area"></div>
+        <div class="panel note-panel"><span class="note-icon">ⓘ</span><p><b>Starter question bank:</b> This version includes a small set of original practice questions to make the arena usable immediately. It is not an official PYQ database. The AI Tutor can generate more questions once your API is configured.</p></div>
+      </section>
+
+      <section class="page" id="page-planner">
+        <div class="page-title"><p class="eyebrow">SHOW UP, THEN LEVEL UP</p><h1>Mission <span>Planner</span></h1><p>Turn a big syllabus into a manageable plan. Tick off tasks as you complete them.</p></div>
+        <div class="planner-top"><div class="panel planner-score"><p class="eyebrow">TODAY'S COMPLETION</p><strong id="plannerPercent">0%</strong><div class="big-progress"><span id="plannerBar"></span></div><small id="plannerCaption">A good session starts with one task.</small></div><div class="panel planner-tip"><span class="stat-icon purple">✦</span><div><b>Planner principle</b><p>Mix learning, problem-solving, and revision. Adjust the plan to your classes and energy.</p></div></div></div>
+        <div class="panel"><div class="panel-heading"><div><p class="eyebrow">YOUR DAILY MISSIONS</p><h3>Make today count</h3></div><button id="addMissionBtn" class="btn btn-ghost">+ Add mission</button></div><div id="missionEditor" class="mission-list"></div></div>
+      </section>
+
+      <section class="page" id="page-mistakes">
+        <div class="page-title"><p class="eyebrow">YOUR ERRORS ARE DATA</p><h1>Mistake <span>Intelligence</span></h1><p>Record the pattern behind a wrong answer, then decide how you'll prevent it next time.</p></div>
+        <div class="panel mistake-form-panel"><h3>Log a learning moment</h3><form id="mistakeForm" class="mistake-form"><div><label class="field-label" for="mistakeSubject">Subject</label><select id="mistakeSubject"><option>Physics</option><option>Chemistry</option><option>Mathematics</option></select></div><div><label class="field-label" for="mistakeType">Error type</label><select id="mistakeType"><option>Concept gap</option><option>Calculation error</option><option>Formula recall</option><option>Misread question</option><option>Time management</option></select></div><div class="wide-field"><label class="field-label" for="mistakeNote">What happened and what will you do differently?</label><textarea id="mistakeNote" rows="3" placeholder="Example: I used the wrong sign convention in…"></textarea></div><button class="btn btn-primary" type="submit">Save learning moment</button></form></div>
+        <div class="panel"><div class="panel-heading"><div><p class="eyebrow">REVIEW LOG</p><h3>Your learning moments</h3></div><span id="mistakeCount" class="count-chip">0 entries</span></div><div id="mistakeList" class="mistake-list"></div></div>
+      </section>
+
+      <section class="page" id="page-syllabus">
+        <div class="page-title"><p class="eyebrow">THE ROADMAP</p><h1>Syllabus <span>Map</span></h1><p>A broad topic map for JEE Main and Advanced. Mark topics as you study them.</p></div>
+        <div class="syllabus-tools panel"><input id="syllabusSearch" type="search" placeholder="Search chapters or topics…"><span id="syllabusCount" class="count-chip">0 completed</span></div>
+        <div id="syllabusGrid" class="syllabus-grid"></div>
+        <div class="note-panel panel"><span class="note-icon">ⓘ</span><p>This is a broad planning map, not an official syllabus notification. Check the current NTA/JEE Advanced syllabus for the exam year you are targeting.</p></div>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
